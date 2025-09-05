@@ -10,6 +10,7 @@ import {
   SignOutButton,
   UserButton,
 } from "@clerk/nextjs";
+import ConvexClientProvider from "@/components/providers/ConvexClientProvider";
 
 export const metadata: Metadata = {
   title: "CodeSphere",
@@ -36,8 +37,9 @@ export default function RootLayout({
               <SignOutButton />
             </SignedIn>
           </nav>
-
-          {children}
+          <ConvexClientProvider>
+            {children}
+          </ConvexClientProvider>
         </body>
       </ClerkProvider>
     </html>
