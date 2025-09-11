@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <ClerkProvider>
         <body>
-          <nav>
+          <nav className="p-4 flex justify-end space-x-4 bg-amber-500 text-amber-300">
             <SignedOut>
               <SignInButton />
               <SignUpButton />
